@@ -13,4 +13,9 @@
   - name: play 1
     ansible.builtin.debug:
       msg: "hi this is abdulah, i am learning ansible"
+  - name: starting nginx
+    ansible.builtin.service:
+      name: nginx
+      state: restarted
+      enabled: yes
       
