@@ -1,0 +1,16 @@
+- name: first 
+  become: yes
+  hosts: localhost
+  tasks:
+  - name: installing nginx
+    ansible.builtin.package:
+      name: nginx
+      state: present
+  - name: creating a new folder
+    ansible.builtin.file:
+      path: /app
+      state: directory
+  - name: play 1
+    ansible.builtin.debug:
+      msg: "hi this is abdulah, i am learning ansible"
+      
